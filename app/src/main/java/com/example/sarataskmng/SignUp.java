@@ -1,11 +1,17 @@
 package com.example.sarataskmng;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUp extends AppCompatActivity {
 
@@ -60,8 +66,36 @@ public class SignUp extends AppCompatActivity {
         {
             tvRePass.setError("Have to be at least 8 char and the same password");
             tvPass.setError("Have to be at least 8 char and the same password");
+            isok=false;
+        }
+        if(fname.length()==0)
+        {
+            tvFname.setError("enter name");
+            isok=false;
+        }
+        if(isok)
+        {
+            createAcount(email,passwl,fname,lname,phone);
+            //createAcount(email,passl);
+
+
         }
     }
 
+    private void createAcount(String email, String passwl, String fname, String lname,String phone){
+        FirebaseAuth auth=FirebaseAuth.getInstance();
+        auth.createUserWithEmailAndPassword(email,passwl).
+                addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            finish();
+                        }
+                        else{
+                            tvEmail.setError("sign up failed");
+                        }
+                    }
+                });
+    }
 
 }
