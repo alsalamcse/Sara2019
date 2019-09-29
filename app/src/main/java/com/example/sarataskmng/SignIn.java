@@ -34,6 +34,14 @@ public class SignIn extends AppCompatActivity {
         etPass=(EditText)findViewById(R.id.etPass);
         btnIn=(Button)findViewById(R.id.btnIn);
         btnUp=(Button)findViewById(R.id.btnUp);
+        btnUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplication(),SignUp.class);
+                startActivity(i);
+
+            }
+        });
 
         btnIn.setOnClickListener(new View.OnClickListener() {
             @Override
