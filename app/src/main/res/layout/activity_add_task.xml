@@ -10,44 +10,70 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="64dp"
         android:ems="10"
+        android:hint="title"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="160dp" />
+        app:layout_constraintBottom_toTopOf="@+id/subject"
+        app:layout_constraintStart_toStartOf="@+id/subject"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/subject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="269dp"
+        android:layout_marginBottom="62dp"
         android:ems="10"
+        android:hint="subject"
         android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="269dp" />
+        app:layout_constraintBottom_toTopOf="@+id/skbPio"
+        app:layout_constraintStart_toStartOf="@+id/tvPio"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnSave2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="245dp"
         android:text="save"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="438dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/skbPio"
+        app:layout_constraintTop_toBottomOf="@+id/skbPio" />
 
     <SeekBar
         android:id="@+id/skbPio"
-        android:layout_width="86dp"
-        android:layout_height="15dp"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="376dp" />
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginBottom="47dp"
+        android:max="3"
+        android:progress="5"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvPio"
+        app:layout_constraintTop_toBottomOf="@+id/subject" />
 
     <EditText
         android:id="@+id/tvPio"
-        android:layout_width="61dp"
-        android:layout_height="41dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="328dp"
         android:ems="10"
         android:hint="piority"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="362dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/skbPio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject" />
 </androidx.constraintlayout.widget.ConstraintLayout>
