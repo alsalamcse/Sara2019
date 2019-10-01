@@ -8,6 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import data.MyTask;
+
 public class AddTask extends AppCompatActivity {
 
     private EditText title;
@@ -52,6 +57,22 @@ public class AddTask extends AppCompatActivity {
             isok=false;
         }
 
+        if(isok)
+        {
+            MyTask t=new MyTask();
+            t.setTitle(title1);
+            createMyTask(t);
+        }
 
+    }
+
+    private void createMyTask(MyTask t)
+    {
+        //.1
+        FirebaseDatabase database=FirebaseDatabase.getInstance();
+        //.2
+        DatabaseReference reference = database.getReference();
+        String key = reference.child("tasks").push().getKey();
+        reference.child("tasks").child(key).setValue(t);
     }
 }
