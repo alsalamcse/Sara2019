@@ -1,7 +1,4 @@
-package com.example.sarataskmng;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.sara2019;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +6,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -108,7 +108,7 @@ public class SignIn extends AppCompatActivity {
                 if (task.isSuccessful())
                 {
                     // todo go to main screen (all task activity)
-                    Intent i=new Intent(getApplication(),MainTasksActivity.class);
+                    Intent i=new Intent(getApplication(),TempAllTaskActivity.class);
                     startActivity(i);
                 }
                 else
