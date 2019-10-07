@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class SignIn extends AppCompatActivity {
 
-    private ImageView img;
+
     private EditText tvEmail2 ;
     private EditText etPass;
     private Button btnIn;
@@ -29,7 +29,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        img=(ImageView)findViewById(R.id.img);
+
         tvEmail2=(EditText)findViewById(R.id.tvEmail2);
         etPass=(EditText)findViewById(R.id.etPass);
         btnIn=(Button)findViewById(R.id.btnIn);
