@@ -41,6 +41,7 @@ public class AddTask extends AppCompatActivity {
         btnSave2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dataHandler();
 
             }
         });

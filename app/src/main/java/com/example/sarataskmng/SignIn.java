@@ -46,7 +46,7 @@ public class SignIn extends AppCompatActivity {
         btnIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                datahandler();
+                dataHandler();
             }
         });
 
@@ -54,7 +54,7 @@ public class SignIn extends AppCompatActivity {
 
 
 
-    private void datahandler()
+    private void dataHandler()
     {
         String email=tvEmail2.getText().toString();
         String passw=etPass.getText().toString();
