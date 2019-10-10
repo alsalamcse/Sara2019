@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,7 +24,7 @@ public class AddTask extends AppCompatActivity {
     private EditText subject;
     private Button btnSave2;
     private SeekBar skbPio;
-    private EditText tvPio;
+    private TextView tvPior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +35,8 @@ public class AddTask extends AppCompatActivity {
         subject=(EditText)findViewById(R.id.subject);
         btnSave2=(Button) findViewById(R.id.btnSave2);
         skbPio=(SeekBar)findViewById(R.id.skbPio);
-        tvPio=(EditText)findViewById(R.id.tvPio);
+
+        tvPior=(TextView)findViewById(R.id.tvPior);
 
         btnSave2.setOnClickListener(new View.OnClickListener() {
             @Override
