@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -79,8 +80,12 @@ public class AddTask extends AppCompatActivity {
         FirebaseDatabase database=FirebaseDatabase.getInstance();
         //.2
         DatabaseReference reference = database.getReference();
+        FirebaseAuth auth=FirebaseAuth.getInstance();//to get the user uid (or other details like email)
+        String uid = auth.getCurrentUser().getUid();
+        t.setOwner(uid);
+
         String key = reference.child("tasks").push().getKey();
-        reference.child("tasks").child(key).setValue(t).addOnCompleteListener(AddTask.this, new OnCompleteListener<Void>() {
+        reference.child("tasks").child(uid).child(key).setValue(t).addOnCompleteListener(AddTask.this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {

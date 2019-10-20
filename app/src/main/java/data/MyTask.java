@@ -6,6 +6,7 @@ public class MyTask
     private String key; // key: unique id for each object. have to be...
     private String title;
     private String subject;
+    private String owner;
     private int important;
 
     public String getKey() {
@@ -30,6 +31,14 @@ public class MyTask
 
     public void setSubject(String subject) {
         this.subject = subject;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
     public int getImportant() {
