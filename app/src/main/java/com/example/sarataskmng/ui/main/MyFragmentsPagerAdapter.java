@@ -14,7 +14,7 @@ import com.example.sarataskmng.R;
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class MyFragmentsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
     private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2};
@@ -24,7 +24,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private HistoryFragment historyFragment;
     private RemovedFragment removedFragment;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public MyFragmentsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
         //2
@@ -33,6 +33,11 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         removedFragment=new RemovedFragment();
     }
 
+    /**
+     * number of fragment(tab)
+     * @param position
+     * @return
+     */
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
