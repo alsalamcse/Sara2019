@@ -46,7 +46,17 @@ public class AllTaskFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_all_task, container, false);
         lvTasks=view.findViewById(R.id.lstTasks);
+
+        lvTasks.setAdapter(tasksAdapter);
+
+
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        readTaskFromFirebase();
     }
 
     public void readTaskFromFirebase(){
@@ -54,6 +64,7 @@ public class AllTaskFragment extends Fragment {
         FirebaseAuth auth=FirebaseAuth.getInstance();
         String uid = auth.getUid();
         DatabaseReference reference = database.getReference();
+        tasksAdapter.clear();
         reference.child("tasks").child(uid).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
@@ -62,6 +73,7 @@ public class AllTaskFragment extends Fragment {
                 {
                     MyTask t =d.getValue(MyTask.class);
                     Log.d("MyTask",t.toString());
+                    tasksAdapter.add(t);
                 }
             }
 
