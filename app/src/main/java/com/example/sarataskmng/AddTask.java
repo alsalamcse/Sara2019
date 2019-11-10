@@ -69,6 +69,8 @@ public class AddTask extends AppCompatActivity {
         {
             MyTask t=new MyTask();
             t.setTitle(title1);
+            t.setSubject(subject1);
+            t.setImportant(seekbar);
             createMyTask(t);
         }
 
@@ -84,8 +86,8 @@ public class AddTask extends AppCompatActivity {
         String uid = auth.getCurrentUser().getUid();
         t.setOwner(uid);
 
-        String key = reference.child("tasks").push().getKey();
-        reference.child("tasks").child(uid).child(key).setValue(t).addOnCompleteListener(AddTask.this, new OnCompleteListener<Void>() {
+        String key = reference.child("task").push().getKey();
+        reference.child("task").child(uid).child(key).setValue(t).addOnCompleteListener(AddTask.this, new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {

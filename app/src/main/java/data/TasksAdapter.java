@@ -16,8 +16,8 @@ import androidx.annotation.Nullable;
 import com.example.sarataskmng.R;
 
 public class TasksAdapter extends ArrayAdapter <MyTask>{
-    public TasksAdapter(@NonNull Context context, int resource) {
-        super(context, resource);
+    public TasksAdapter(@NonNull Context context) {
+        super(context, R.layout.taskitem);
     }
 
     /**
@@ -31,12 +31,12 @@ public class TasksAdapter extends ArrayAdapter <MyTask>{
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         //building item view
-        View vitem=LayoutInflater.from(getContext()).inflate(R.layout.taskitem,parent,true);
+        View vitem=LayoutInflater.from(getContext()).inflate(R.layout.taskitem,parent,false);
         TextView tvTitle=vitem.findViewById(R.id.itmTvTitle);
         TextView tvSubject=vitem.findViewById(R.id.itmTvSubject);
         RatingBar rbPrio=vitem.findViewById(R.id.itmRatingPrio);
         CheckBox cbIsCompleted =vitem.findViewById(R.id.itmChbxlsCompleted);
-       ImageView ivInfo =vitem.findViewById(R.id.itmTvTitle);
+       ImageView ivInfo =vitem.findViewById(R.id.imageView2);
 
         MyTask myTask = getItem(position);
 
@@ -45,7 +45,7 @@ public class TasksAdapter extends ArrayAdapter <MyTask>{
         rbPrio.setRating(myTask.getImportant());
         cbIsCompleted.setChecked(false);
 
-        return super.getView(position, convertView, parent);
+        return vitem;
 
 
 
