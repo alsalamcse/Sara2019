@@ -38,8 +38,13 @@ public class TasksAdapter extends ArrayAdapter <MyTask>{
         CheckBox cbIsCompleted =vitem.findViewById(R.id.itmChbxlsCompleted);
        ImageView ivInfo =vitem.findViewById(R.id.imageView2);
 
+        //getting data source
         MyTask myTask = getItem(position);
 
+        // todo טיפול באירוע מחיקה
+        cbIsCompleted.setOnCheckedChangeListener(new);
+
+        //connect item view to data source
         tvTitle.setText(myTask.getTitle());
         tvSubject.setText(myTask.getSubject());
         rbPrio.setRating(myTask.getImportant());
