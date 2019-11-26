@@ -1,13 +1,17 @@
 package data;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -74,6 +78,9 @@ public class TasksAdapter extends ArrayAdapter <MyTask>{
                         public void onClick(View v)
                         {
                             Toast.makeText(getContext(),myTask.getTitle() , Toast.LENGTH_SHORT).show();
+                            ShowMenu();
+
+
                         }
                     });
                 }
@@ -93,4 +100,8 @@ public class TasksAdapter extends ArrayAdapter <MyTask>{
 
 
     }
+
+
+
+
 }
