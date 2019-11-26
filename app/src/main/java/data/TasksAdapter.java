@@ -101,7 +101,36 @@ public class TasksAdapter extends ArrayAdapter <MyTask>{
 
     }
 
+    public void ShowMenu(){
+        final String[] option = {"Add", "View", "Select", "Delete"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.Layout.select_dialog_item);
+        adapter.addAll(option);
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle("Select option");
+        builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+                if (i==0){
+                    Toast.makeText(getContext(),"Add", Toast.LENGTH_SHORT).show();
+                }
+                if(i==1){
+                    Toast.makeText(getContext(),"Add",Toast.LENGTH_SHORT).show();
+
+                }
+                if(i==2){
+                    Toast.makeText(getContext(),"Add",Toast.LENGTH_SHORT).show();
+
+                }
+                if(i==3){
+                    Toast.makeText(getContext(),"Add",Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+        final AlertDialog a = builder.create();
+        a.show();
 
 
+    }
 
 }
