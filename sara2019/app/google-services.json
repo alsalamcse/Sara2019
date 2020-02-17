@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1030073310225",
+    "firebase_url": "https://sara2019-1ea70.firebaseio.com",
+    "project_id": "sara2019-1ea70",
+    "storage_bucket": "sara2019-1ea70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1030073310225:android:58ca39b221f92b51f525b0",
+        "android_client_info": {
+          "package_name": "com.example.sara2019"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1030073310225-9s6utl8p2q47ge9edtffnt4ljl1uv68o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sara2019",
+            "certificate_hash": "8d4e87598d212bdb282d05faa7766dc9c486dbdf"
+          }
+        },
+        {
+          "client_id": "1030073310225-9se4t1hfot79t61hmbvq7om4rm0c07pg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClEMMh1F_aKO7_-2sH8188fbGDSvf5sXk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1030073310225-9se4t1hfot79t61hmbvq7om4rm0c07pg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
