@@ -1,5 +1,6 @@
 package com.example.sara2019;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,6 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.sara2019.data.MyOrder;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class AddLocation extends AppCompatActivity {
 
@@ -56,6 +65,11 @@ public class AddLocation extends AppCompatActivity {
 
         if(isok)
         {
+            MyOrder o=new MyOrder();
+            o.setLocation(location);
+            o.setAdress(address);
+            createMyOrder(o);
+
 
 
 
@@ -64,5 +78,33 @@ public class AddLocation extends AppCompatActivity {
 
     }
 
+    private void createMyOrder(MyOrder o)
+    {
+        FirebaseDatabase database=FirebaseDatabase.getInstance();
+        //.2
+        DatabaseReference reference = database.getReference();
+        FirebaseAuth auth=FirebaseAuth.getInstance();//to get the user uid (or other details like email)
+        String uid = auth.getCurrentUser().getUid();
+        o.setAdress(uid);
 
-}
+        String key = reference.child("order").push().getKey();
+        o.setKey(key);
+
+        reference.child("order").child(uid).child(key).setValue(o).addOnCompleteListener(AddLocation.this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if (task.isSuccessful()) {
+                    Toast.makeText(AddLocation.this, "add successful", Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                else {
+                    Toast.makeText(AddLocation.this, "add failed" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    task.getException().printStackTrace();
+                }
+            }
+        });
+    }
+    }
+
+
+

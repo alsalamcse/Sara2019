@@ -19,5 +19,6 @@ public class DeliveryWorker extends AppCompatActivity {
         btnAccept=(Button)findViewById(R.id.btnAccept);
         btnReject=(Button)findViewById(R.id.btnReject);
         btnWait=(Button)findViewById(R.id.btnWait);
+
     }
 }
