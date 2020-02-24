@@ -15,18 +15,18 @@
         android:ems="10"
         android:hint="location"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/etAddress"
-        app:layout_constraintStart_toStartOf="@+id/etAddress" />
+        app:layout_constraintBottom_toTopOf="@+id/etAddDes"
+        app:layout_constraintStart_toStartOf="@+id/etAddDes" />
 
     <EditText
-        android:id="@+id/etAddress"
+        android:id="@+id/etAddDes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="49dp"
         android:ems="10"
-        android:hint="address"
+        android:hint="dest"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/tvPior"
         app:layout_constraintStart_toEndOf="@+id/tvPior" />
@@ -49,8 +49,8 @@
         android:layout_marginStart="64dp"
         android:layout_marginLeft="64dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintStart_toStartOf="@+id/etAddress"
-        app:layout_constraintTop_toBottomOf="@+id/etAddress" />
+        app:layout_constraintStart_toStartOf="@+id/etAddDes"
+        app:layout_constraintTop_toBottomOf="@+id/etAddDes" />
 
     <Button
         android:id="@+id/btnSave"

@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class AddLocation extends AppCompatActivity {
 
     private EditText etLoc;
-    private EditText etAddress;
+    private EditText etAddDes;
     private Button btnSave;
     private SeekBar skbPio;
     private TextView tvPior;
@@ -33,7 +33,7 @@ public class AddLocation extends AppCompatActivity {
         setContentView(R.layout.activity_add_location);
 
         etLoc=(EditText)findViewById(R.id.etLoc);
-        etAddress=(EditText)findViewById(R.id.etAddress);
+        etAddDes=(EditText)findViewById(R.id.etAddDes);
         btnSave=(Button)findViewById(R.id.btnSave);
         skbPio=(SeekBar)findViewById(R.id.SeekBar);
         tvPior=(TextView)findViewById(R.id.tvPior);
@@ -51,14 +51,14 @@ public class AddLocation extends AppCompatActivity {
     {
         boolean isok=true;// if all fields filled well
         String location=etLoc.getText().toString();
-        String address=etAddress.getText().toString();
+        String destination=etAddDes.getText().toString();
         int seekbar=skbPio.getProgress();
 
         if (location.length()==0){
             etLoc.setError("enter location");
             isok=false;
         }
-        if(address.length()==0){
+        if(destination.length()==0){
             etLoc.setError("enter location");
             isok=false;
         }
@@ -67,7 +67,7 @@ public class AddLocation extends AppCompatActivity {
         {
             MyOrder o=new MyOrder();
             o.setLocation(location);
-            o.setAdress(address);
+            o.setAdress(destination);
             createMyOrder(o);
 
 
