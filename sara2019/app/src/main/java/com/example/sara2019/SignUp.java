@@ -1,5 +1,6 @@
 package com.example.sara2019;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -91,11 +92,15 @@ public class SignUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(SignUp.this, "Sign up Successful", Toast.LENGTH_SHORT).show();
+                            Intent i=new Intent(getApplication(),AddLocation.class);
+                            startActivity(i);
                             finish();
 
                         }
                         else{
-                            tvEmail.setError("sign up failed");
+                            tvEmail.setError("sign up failed"+task.getException().getMessage()
+                            );
+                            task.getException().printStackTrace();
                         }
                     }
                 });
