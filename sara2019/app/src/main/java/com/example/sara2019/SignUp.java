@@ -92,8 +92,7 @@ public class SignUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(SignUp.this, "Sign up Successful", Toast.LENGTH_SHORT).show();
-                            Intent i=new Intent(getApplication(),AddLocation.class);
-                            startActivity(i);
+
                             finish();
 
                         }
