@@ -28,8 +28,6 @@ public class SignIn extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-
-
         tvEmail2=(EditText)findViewById(R.id.tvEmail2);
         etPass=(EditText)findViewById(R.id.etPass);
         btnIn=(Button)findViewById(R.id.btnIn);

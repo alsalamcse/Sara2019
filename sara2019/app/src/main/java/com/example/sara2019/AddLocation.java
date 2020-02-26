@@ -68,6 +68,7 @@ public class AddLocation extends AppCompatActivity {
             MyOrder o=new MyOrder();
             o.setLocation(location);
             o.setAdress(destination);
+            o.setImportant(seekbar);
             createMyOrder(o);
 
 

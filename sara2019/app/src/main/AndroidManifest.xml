@@ -33,6 +33,7 @@
         <activity android:name=".Order" />
         <activity android:name=".DeliveryWorker" />
         <activity android:name=".AddLocation" />
+        <activity android:name=".TempAllTaskActivity"/>
         <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
