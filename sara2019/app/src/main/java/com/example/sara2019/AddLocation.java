@@ -35,8 +35,8 @@ public class AddLocation extends AppCompatActivity {
         etLoc=(EditText)findViewById(R.id.etLoc);
         etAddDes=(EditText)findViewById(R.id.etAddDes);
         btnSave=(Button)findViewById(R.id.btnSave);
-        skbPio=(SeekBar)findViewById(R.id.SeekBar);
-        tvPior=(TextView)findViewById(R.id.tvPior);
+        skbPio=findViewById(R.id.SeekBar);
+        tvPior=findViewById(R.id.tvPior);
 
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override

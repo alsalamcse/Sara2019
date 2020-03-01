@@ -5,6 +5,8 @@ public class MyOrder
     private String key;
     private String Location;
     private String adress;
+    private String name;
+    private String phone;
     private int important;
 
 
@@ -30,6 +32,22 @@ public class MyOrder
 
     public void setAdress(String adress) {
         this.adress = adress;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public int getImportant() {
