@@ -22,7 +22,7 @@ public class MyOrdersActivity extends AppCompatActivity {
 
     //5.2
     private ListView listView;
-    private MyOrdersActivity myOrdersAdapter;
+    private ClientAdapter myOrdersAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +30,7 @@ public class MyOrdersActivity extends AppCompatActivity {
 
         //5.3
         listView=findViewById(R.id.listView);
-        myOrdersAdapter=new MyOrdersActivity(getBaseContext(),R.layout.trackeritem);
+        myOrdersAdapter=new ClientAdapter(getBaseContext(),R.layout.trackeritem);
         listView.setAdapter(myOrdersAdapter);
 
     }
