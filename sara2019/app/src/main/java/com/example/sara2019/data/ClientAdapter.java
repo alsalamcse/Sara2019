@@ -25,8 +25,8 @@ public class ClientAdapter extends ArrayAdapter<MyOrder>
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View vitem= LayoutInflater.from(getContext()).inflate(R.layout.trackeritem,parent,false);
 
-        TextView clientName=vitem.findViewById(R.id.tvItemClientName);
-        TextView clientPhone=vitem.findViewById(R.id.tvClientPhone);
+        TextView clientName=vitem.findViewById(R.id.tvitname);
+        TextView clientPhone=vitem.findViewById(R.id.tvitPhone);
 
       final   MyOrder myOrder=getItem(position);
 
