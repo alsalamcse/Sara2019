@@ -15,6 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".MyOrdersActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -33,7 +34,7 @@
         <activity android:name=".Order" />
         <activity android:name=".DeliveryWorker" />
         <activity android:name=".AddLocation" />
-        <activity android:name=".TempAllTaskActivity"/>
+        <activity android:name=".TempAllTaskActivity" />
         <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,16 +43,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".SignUp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-       <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-
-
     </application>
 
 </manifest>

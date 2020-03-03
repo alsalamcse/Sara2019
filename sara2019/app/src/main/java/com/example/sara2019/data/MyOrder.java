@@ -1,5 +1,7 @@
 package com.example.sara2019.data;
 
+import android.widget.Button;
+
 public class MyOrder
 {
     private String key;
@@ -7,6 +9,7 @@ public class MyOrder
     private String adress;
     private String name;
     private String phone;
+    private Button update;
     private int important;
 
 
@@ -50,6 +53,14 @@ public class MyOrder
         this.phone = phone;
     }
 
+    public Button getUpdate() {
+        return update;
+    }
+
+    public void setUpdate(Button update) {
+        this.update = update;
+    }
+
     public int getImportant() {
         return important;
     }
@@ -60,12 +71,17 @@ public class MyOrder
 
 
 
+
+
     @Override
     public String toString() {
         return "MyOrder{" +
                 "key='" + key + '\'' +
                 ", Location='" + Location + '\'' +
                 ", adress='" + adress + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", update=" + update +
                 ", important=" + important +
                 '}';
     }
