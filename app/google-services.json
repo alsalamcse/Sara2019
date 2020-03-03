@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "541288040801",
+    "firebase_url": "https://sarataskmng.firebaseio.com",
+    "project_id": "sarataskmng",
+    "storage_bucket": "sarataskmng.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541288040801:android:dd1cbcde95c8a634369d20",
+        "android_client_info": {
+          "package_name": "com.example.sarataskmng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541288040801-ns63ur6oc6eno50qfc7qhqt7ps04ap31.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sarataskmng",
+            "certificate_hash": "8d4e87598d212bdb282d05faa7766dc9c486dbdf"
+          }
+        },
+        {
+          "client_id": "541288040801-rtnilepof4roats2c9beuirqkl5hnm60.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApnh0Eiynp--kAqcAh4LycSuCcmdJlOPs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541288040801-rtnilepof4roats2c9beuirqkl5hnm60.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
