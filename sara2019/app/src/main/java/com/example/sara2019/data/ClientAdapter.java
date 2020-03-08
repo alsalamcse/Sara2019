@@ -46,6 +46,7 @@ public class ClientAdapter extends ArrayAdapter<MyOrder>
         //4.5 add event listner
     //    clientName.setOnClickListener(new View.OnClickListener() {
      //       @Override
+        //
         //       public void onClick(View v) {
     //           Toast.makeText(getContext(), "update"+myOrder.getUpdate(), Toast.LENGTH_SHORT).show();
      //       }
