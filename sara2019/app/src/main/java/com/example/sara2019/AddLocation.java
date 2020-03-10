@@ -91,7 +91,9 @@ public class AddLocation extends AppCompatActivity {
         String key = reference.child("order").push().getKey();
         o.setKey(key);
 
-        reference.child("order").child(uid).child(key).setValue(o).addOnCompleteListener(AddLocation.this, new OnCompleteListener<Void>() {
+        reference.child("order").child(uid).child(key).setValue(o).addOnCompleteListener(AddLocation.this,
+
+                new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {

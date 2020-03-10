@@ -7,7 +7,7 @@ public class MyOrder
     private String key;
     private String Location;
     private String adress;
-    private String name;
+    private String uid;
     private String phone;
     private Button update;
     private int important;
@@ -37,13 +37,7 @@ public class MyOrder
         this.adress = adress;
     }
 
-    public String getName() {
-        return name;
-    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getPhone() {
         return phone;
@@ -79,7 +73,7 @@ public class MyOrder
                 "key='" + key + '\'' +
                 ", Location='" + Location + '\'' +
                 ", adress='" + adress + '\'' +
-                ", name='" + name + '\'' +
+
                 ", phone='" + phone + '\'' +
                 ", update=" + update +
                 ", important=" + important +
