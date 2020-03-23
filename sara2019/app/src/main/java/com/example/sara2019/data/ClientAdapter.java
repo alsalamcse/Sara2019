@@ -40,7 +40,7 @@ public class ClientAdapter extends ArrayAdapter<MyOrder>
          final MyOrder myOrder=getItem(position);
 
          //4.4 set object data on the view
-        clientName.setText(myOrder.getName());
+       // clientName.setText(myOrder.getName());
         clientPhone.setText(myOrder.getPhone());
 
         //4.5 add event listner
