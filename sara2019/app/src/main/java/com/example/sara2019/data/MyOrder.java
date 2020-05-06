@@ -10,6 +10,7 @@ public class MyOrder
     private String uid;
     private String phone;
     private Button update;
+    private String name;
     private int important;
 
 
@@ -59,9 +60,19 @@ public class MyOrder
         return important;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public void setImportant(int important) {
         this.important = important;
     }
+
+
 
 
 
@@ -73,9 +84,10 @@ public class MyOrder
                 "key='" + key + '\'' +
                 ", Location='" + Location + '\'' +
                 ", adress='" + adress + '\'' +
-
+                ", uid='" + uid + '\'' +
                 ", phone='" + phone + '\'' +
                 ", update=" + update +
+                ", name='" + name + '\'' +
                 ", important=" + important +
                 '}';
     }
