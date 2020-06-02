@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8CD1DF"
     tools:context=".AddLocation">
 
     <EditText
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="49dp"
         android:layout_marginLeft="49dp"
-        android:layout_marginTop="49dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="81dp"
         android:layout_marginRight="81dp"
         android:text="piority"
@@ -46,7 +47,7 @@
 
     <SeekBar
         android:id="@+id/SeekBar"
-        android:layout_width="0dp"
+        android:layout_width="100"
         android:layout_height="24dp"
         android:layout_marginEnd="208dp"
         android:layout_marginRight="208dp"

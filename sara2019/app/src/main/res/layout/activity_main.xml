@@ -5,15 +5,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#162E3A"
-    tools:context=".Welcome">
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="356dp"
-        android:layout_height="302dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/ic_launcher_foreground"
-        tools:layout_editor_absoluteY="160dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    tools:context=".Welcome"/>
